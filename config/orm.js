@@ -26,6 +26,7 @@ function questionMarkInsertion(quantity) {
           throw err;
         }
         callback(result);
+        console.log(result);
       });
     },
     insertOne: function(table, column, values, callback) {
@@ -38,7 +39,7 @@ function questionMarkInsertion(quantity) {
       query += questionMarkInsertion(values.length);
       query += ") ";
   
-      connection.query(query, vals, function(err, result) {
+      connection.query(query, values, function(err, result) {
         if (err) {
           throw err;
         }
