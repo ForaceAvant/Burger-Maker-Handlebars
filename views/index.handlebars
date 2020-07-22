@@ -5,26 +5,28 @@
 </div>
 <div class="container">
     <div class="row">
-    <div class="col-md-6 text-center" class="task">
+    <div class="col-md-6 ">
+        <h3 class="text-center"><strong>Burgers to Devour</strong></h3>
         <div class="row">
             {{#each burger_info}}
             {{#unless this.devoured}}
-            <div class="col-md-9 text-center">
-                <pre>{{this.id}}. {{this.burger_name}}
-					</pre>
-                <!-- {{this.Date}} -->
+            
+            <div class="col-md-9 border p-1">
+               {{this.id}}. {{this.burger_name}}
+					
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 p-1" >
                 <form class="devour-form button-size">
-                    <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-                    <button type="submit" class="btn btn-default">Devour it!</button>
+                    <input type="hidden" class="burger_id" type="text" value={{this.id}}>
+                    <button type="submit" class="btn btn-danger">Devour it!</button>
                 </form>
             </div>
             {{/unless}}
             {{/each}}
         </div>
     </div>
-    <div class="col-md-6 text-center" class="task">
+    <div class="col-md-6 text-center">
+        <h3 class="text-center"><strong>Burgers Devoured</strong></h3>
         {{#each burger_info}}
         {{#if this.devoured}}
         <input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
@@ -36,13 +38,13 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center enter_section">
+    <div class="row d-flex justify-content-center p-3">
+        <div class="col-md-6 text-center enter_section">
             <form action="/burgers/create" method="POST">
                 <input type="text" class="form-control" name="burger_name" value="" id="enter_text">
-                <button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+                <button type="submit" class="btn btn-primary m-3" id="text-enter-button">Submit</button>
             </form>
-            <p>Enter a burger you want to eat Click the "Submit" button.</p>
+            <p>Enter a Burger!</p>
         </div>
     </div>
 </div>
