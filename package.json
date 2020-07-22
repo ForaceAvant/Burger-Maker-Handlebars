@@ -1,0 +1,25 @@
+{
+  "name": "Burger-Maker-Handlebars",
+  "version": "1.0.0",
+  "description": "Website that allows you to design a burger and then store into a databasee with MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForaceAvant/Burger-Maker-Handlebars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ForaceAvant/Burger-Maker-Handlebars/issues"
+  },
+  "homepage": "https://github.com/ForaceAvant/Burger-Maker-Handlebars#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
